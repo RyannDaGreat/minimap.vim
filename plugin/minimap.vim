@@ -13,13 +13,12 @@ if !exists('g:minimap_exec_warning')
     let g:minimap_exec_warning  = 1
 endif
 
-if !executable('code-minimap')
-    if g:minimap_exec_warning != 0
-        echom 'minimap: this plugin requires code-minimap installed.'
-    endif
-
-    finish
-endif
+" if !executable('code-minimap')
+"     if g:minimap_exec_warning != 0
+"         echom 'minimap: this plugin requires code-minimap installed.'
+"     endif
+"     finish
+" endif
 
 let g:loaded_minimap = 1
 

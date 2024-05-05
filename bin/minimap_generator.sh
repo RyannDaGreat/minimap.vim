@@ -21,26 +21,26 @@ vscale=$2
 padding=$3
 file=$4
 
-# # Check if the RP_SYS_EXECUTABLE variable is set
-# if [ -z "$RP_SYS_EXECUTABLE" ]; then
-#     # Print the symbol on 1000 separate lines if the variable is not set
-#     for i in {1..1000}; do
-#         echo "██"
-#     done
-#     echo ""  # Print a newline at the end
-# else
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     echo "$hscale" "$vscale" "$padding" "$file"
-#     $RP_SYS_EXECUTABLE -m rp.libs.draw_code_minimap "$hscale" "$vscale" "$padding" "$file"
-# fi
-
-
-if [ -z "$file" ]; then
-    code-minimap -H "$hscale" -V "$vscale" --padding "$padding"
+# Check if the RP_SYS_EXECUTABLE variable is set
+if [ -z "$RP_SYS_EXECUTABLE" ]; then
+    # Print the symbol on 1000 separate lines if the variable is not set
+    for i in {1..1000}; do
+        echo "██"
+    done
+    echo ""  # Print a newline at the end
 else
-    code-minimap -H "$hscale" -V "$vscale" --padding "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    # echo "$hscale" "$vscale" "$padding" "$file"
+    $RP_SYS_EXECUTABLE -m rp.libs.draw_code_minimap "$hscale" "$vscale" "$padding" "$file"
 fi
+
+
+# if [ -z "$file" ]; then
+#     code-minimap -H "$hscale" -V "$vscale" --padding "$padding"
+# else
+#     code-minimap -H "$hscale" -V "$vscale" --padding "$padding" "$file"
+# fi
